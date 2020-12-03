@@ -1,11 +1,11 @@
-def my_function(*args, **kwargs):
-    suma = 0
-    for i in args:
-        if isinstance(i, int) is True or isinstance(i, float) is True:
-            suma += i
-    print(suma)
-
-my_function(1, 5, -3, 'abc', [12, 56, 'cad'])
+# def my_function(*args, **kwargs):
+#     suma = 0
+#     for i in args:
+#         if isinstance(i, int) is True or isinstance(i, float) is True:
+#             suma += i
+#     print(suma)
+#
+# my_function(1, 5, -3, 'abc', [12, 56, 'cad'])
 
 
 # def recursive_sum(n):
@@ -40,17 +40,23 @@ my_function(1, 5, -3, 'abc', [12, 56, 'cad'])
 # print(recursive_even_sum())
 
 
-# x = float(input())
-#
-#
 # def another_function(x):
 #     try:
-#         if x - int(x) != 0:
-#             return 0
-#         else:
+#         if x - int(x) == 0:
 #             return int(x)
-#     except ValueError as e:
-#         print("Please insert a valid number", e)
-#
-#
-# print(another_function(x))
+#         else:
+#             return 0
+#     except ValueError:
+#         return 0
+
+
+def another_function(x):
+    try:
+        y = int(x)
+    except ValueError:
+        return 0
+    return y
+
+
+x = input()
+print(another_function(x))

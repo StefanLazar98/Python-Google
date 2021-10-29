@@ -1,34 +1,20 @@
+# declararea unei liste care să conțină elementele 7, 8, 9, 2, 3, 1, 4, 10, 5, 6 (în această ordine).
 my_list = [7, 8, 9, 2, 3, 1, 4, 10, 5, 6]
-my_ordered_list = my_list.copy()
-my_ordered_list.sort()
 
-print("Lista ordonata ascendent este : ")
-print(my_ordered_list)
-print("\n")
+# afișarea unei alte liste ordonată ascendent (lista inițială trebuie păstrată în aceeași formă)
+asc_list = my_list
+asc_list.sort()
+print(asc_list)
 
-my_other_ordered_list = my_list.copy()
-my_other_ordered_list.sort(reverse=True)
-print("Lista ordonata descendent este : ")
-print(my_other_ordered_list)
-print("\n")
+# afișarea unei liste ordonată descendent (lista inițială trebuie păstrată în aceeași formă)
+desc_list = asc_list[::-1]
+print(desc_list)
 
-my_even_sliced_list = my_ordered_list[1::2]
-print("Numerele pare din lista sunt : ")
-print(my_even_sliced_list)
-print("\n")
-my_odd_sliced_list = my_ordered_list[::2]
-print("Numerele impare din lista sunt : ")
-print(my_odd_sliced_list)
-print("\n")
-my_multiple_by_3_list = my_ordered_list[2::3]
-print("Multiplii de 3 din lista sunt : ")
-print(my_multiple_by_3_list)
-print("\n")
+# afișarea numerelor pare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
+print(asc_list[1:10:2])
 
+# afișarea numerelor impare din listă (folosind DOAR slice, altă metodă va fi considerată invalidă)
+print(asc_list[::2])
 
-
-
-
-
-
-
+# afișarea elementelor multipli ai lui 3.
+print(asc_list[2:10:3])
